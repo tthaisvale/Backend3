@@ -35,8 +35,8 @@ public class FilmeService {
     }
 
     @DeleteMapping("/{id}")
-    public ResponseEntity delete(@PathVariable Integer){
-        service.excluir(id);
+    public ResponseEntity delete(@PathVariable Integer id){
+        repository.deleteById(id);
         return ResponseEntity.ok().build();
     }
 }
